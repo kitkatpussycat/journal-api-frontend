@@ -1,13 +1,213 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* html {
+  height: 100%;
+} */
+body {
+  /* background-image: linear-gradient(
+    to right top,
+    #a187f1,
+    #b18ff2,
+    #c098f3,
+    #cda1f4,
+    #d9abf5,
+    #e3b1f3,
+    #ebb7f0,
+    #f2beef,
+    #f8c2ea,
+    #fcc7e6,
+    #fecde3,
+    #ffd3e2
+  ); */
+  /* background-size: 100% 100%;
+  min-height: 100%;
+  width: 100%;
+  color: #023047;
+  font-family: "Martel Sans", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: #ffd3e2;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(254.72, 79%, 74%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(285.45, 73%, 82%) 0, transparent 55%); */
+  /* background-image: url("https://images.unsplash.com/photo-1570284613060-766c33850e00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"); */
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+.entry-card {
+  backdrop-filter: blur(8px) saturate(197%);
+  -webkit-backdrop-filter: blur(8px) saturate(197%);
+  background-color: rgba(17, 25, 40, 0.13);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.text-sidebar {
+  font-size: 18px;
+}
+
+.box-shadow {
+  box-shadow: -4px 4px 24px -5px rgba(0, 0, 0, 0.84);
+}
+
+.card {
+  backdrop-filter: blur(25px) saturate(79%);
+  -webkit-backdrop-filter: blur(25px) saturate(79%);
+  background-color: rgba(189, 16, 224, 0.17);
+  /* border-radius: 12px; */
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  /* background-image: url("https://wallpaperaccess.com/full/201325.png"); */
+}
+
+.sidebar-card {
+  backdrop-filter: blur(0px) saturate(172%);
+  -webkit-backdrop-filter: blur(0px) saturate(172%);
+  background-color: rgba(74, 144, 226, 0.25);
+  /* border-radius: 12px; */
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.card-f {
+  background: rgba(229, 11, 163, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-g {
+  backdrop-filter: blur(25px) saturate(149%);
+  -webkit-backdrop-filter: blur(25px) saturate(149%);
+  background-color: rgba(255, 255, 255, 0.21);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.modalBackGround {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.5);
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideModalBackGround {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1570284613060-766c33850e00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image: radial-gradient(
+      at 47% 33%,
+      hsl(254.72, 79%, 74%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(285.45, 73%, 82%) 0, transparent 55%); */
+}
+
+.bg-modal {
+  color: black;
+  background-image: url("https://images.unsplash.com/photo-1570284613060-766c33850e00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+  color: white;
+  /* background-color: rgb(202, 128, 226);
+  background-size: cover;
+  background-image: radial-gradient(
+      at 47% 33%,
+      hsl(254.72, 79%, 74%) 0,
+      transparent 59%
+    ),
+    radial-gradient(at 82% 65%, hsl(285.45, 73%, 82%) 0, transparent 55%); */
+}
+
+.text-bubble {
+  backdrop-filter: blur(2px) saturate(123%);
+  -webkit-backdrop-filter: blur(2px) saturate(123%);
+  background-color: rgba(74, 144, 226, 0.38);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  margin-top: 5px;
+  /* max-height: 100%;
+  width: 5px; */
+}
+
+.btn-go {
+  background-color: #046aac;
+  color: white;
+}
+
+.btn-medium {
+  background-color: #003160;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #11213b;
+  color: white;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(189, 16, 224, 0.17);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+  background: white;
+} */
+
+@layer base {
+  .footer {
+    @apply flex-row justify-center items-center;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white;
+  }
+}
+
+@layer components {
+  .btn-red {
+    /* @apply bg-gradient-to-r from-blue-400 to-purple-600  hover:bg-purple-500 text-white font-bold py-2 px-4 rounded mx-5; */
+    @apply bg-red-600 font-bold py-2 px-4 rounded mx-1;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-purple-500 to-fuchsia-500 font-bold py-2 px-3 rounded mx-5 text-white;
+  }
 }
