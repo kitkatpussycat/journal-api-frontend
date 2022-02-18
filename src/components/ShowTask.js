@@ -61,24 +61,33 @@ function ShowTask() {
 
   return (
     <div>
-      <div className="m-5 bg-slate-700">
+      <div className="m-5 bg-slate-700 p-1">
         <div className="m-5">
           <strong>{task.name}</strong>
         </div>
-        <div>{task.description}</div>
-        <div>{task.date}</div>
-        <div>{task.completed ? "completed" : "ongoing"}</div>
+        <div className="m-5">
+          Description: <br />
+          {task.description}
+        </div>
+        <div className="m-5">
+          Date: <br />
+          {task.date}
+        </div>
+        <div className="m-5">
+          Status: <br />
+          {task.completed ? "completed" : "ongoing"}
+        </div>
       </div>
 
-      <div>
+      <div className="flex flex-row justify-center items-center">
         <button
-          className="bg-green-500 px-20 py-2 w-1/3 font-bold rounded-lg hover:bg-green-700 hover:text-black transition-all"
+          className="text-md lg:text-xl font-bold btn-medium m-1 hover:bg-blue-900 py-1 px-2 rounded-xl"
           onClick={handleDelete}
         >
           delete
         </button>
 
-        <button className="bg-green-500 px-20 py-2 w-1/3 font-bold rounded-lg hover:bg-green-700 hover:text-black transition-all">
+        <button className="text-md lg:text-xl font-bold btn-medium m-1 hover:bg-blue-900 py-1 px-2 rounded-xl">
           <Link
             to={`/dashboard/categories/${categoryId}/task/${params.id}/edit`}
           >
@@ -87,14 +96,19 @@ function ShowTask() {
         </button>
 
         <button
-          className="bg-green-500 px-20 py-2 w-1/3 font-bold rounded-lg hover:bg-green-700 hover:text-black transition-all"
+          className="text-md lg:text-xl font-bold btn-medium m-1 hover:bg-blue-900 py-1 px-2 rounded-xl"
           onClick={handleCompleted}
         >
           completed
         </button>
       </div>
 
-      <Link to={`/dashboard/categories/${categoryId}`}>Back</Link>
+      <Link
+        className="absolute bottom-5 left-5"
+        to={`/dashboard/categories/${categoryId}`}
+      >
+        Back
+      </Link>
     </div>
   );
 }

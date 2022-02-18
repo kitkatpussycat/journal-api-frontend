@@ -41,15 +41,22 @@ function ShowAllTask() {
   //   };
   return (
     <div>
-      <div>All task</div>
+      <div className="flex justify-center items-center mb-10 mt-2">
+        <h1 className="text-2xl">All task</h1>
+      </div>
 
-      <div>
+      <div className="flex flex-row justify-end m-5">
+        <div className="bg-blue-500 w-fit px-2 m-1">ongoing</div>
+        <div className="bg-green-500 w-fit px-2 m-1">completed</div>
+      </div>
+
+      <div className="flex flex-col m-5 h-96 border-2 border-white rounded-xl overflow-y-auto overflow-x-hidden">
         {tasks &&
           tasks.map((task) => (
             <button
               className={`${
                 task.completed ? "bg-green-500" : "bg-blue-500"
-              } text-md lg:text-xl font-bold hover:bg-blue-900 py-1 px-2 rounded-xl m-1`}
+              } text-md lg:text-xl font-bold hover:bg-blue-900 py-3 px-2 rounded-xl m-1`}
               key={task.id}
               onClick={() => showTask(task.category_id, task.id)}
             >
@@ -57,7 +64,9 @@ function ShowAllTask() {
             </button>
           ))}
       </div>
-      <Link to={`/dashboard`}>Back</Link>
+      <Link className="absolute bottom-5 left-5" to={`/dashboard`}>
+        Back
+      </Link>
     </div>
   );
 }

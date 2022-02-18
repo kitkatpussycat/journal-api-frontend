@@ -57,8 +57,6 @@ function CreateTask() {
       </div>
 
       <div className="flex flex-col justify-center items-center">
-        <h1>form</h1>
-
         <div className="w-4/5 flex flex-col items-center">
           <input
             className="mt-5 w-full h-10 px-1 bg-slate-800 text-white border-slate-600 border focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"

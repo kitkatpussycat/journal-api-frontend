@@ -97,7 +97,7 @@ function PerCategory() {
         </div>
       </div>
 
-      <div className="m-5 flex flex-col">
+      <div className="m-5 flex flex-col border-2 border-white h-96 rounded-xl overflow-y-auto overflow-x-hidden">
         {category.tasks &&
           category.tasks.map((task) => (
             <button

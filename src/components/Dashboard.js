@@ -55,11 +55,11 @@ function Dashboard() {
         </button>
       </div>
 
-      <div className="m-5 flex flex-col">
+      <div className="m-5 flex flex-col overflow-y-auto overflow-x-hidden border-2 border-white rounded-lg h-96 items-center p-5">
         {categories &&
           categories.map((category) => (
             <button
-              className="text-md lg:text-xl font-bold btn-medium hover:bg-blue-900 py-1 px-2 rounded-xl m-1"
+              className="text-md lg:text-xl font-bold btn-medium w-full hover:bg-blue-900 py-5 px-2 rounded-xl m-1"
               key={category.id}
               onClick={() => showCategory(category.id)}
             >
