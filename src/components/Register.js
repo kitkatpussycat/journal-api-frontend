@@ -23,6 +23,7 @@ function Register() {
     } else {
       e.preventDefault();
       setLoading(true);
+      setPassError("");
       const [data, errors] = await register(
         registerAccount.email,
         registerAccount.password
@@ -33,6 +34,8 @@ function Register() {
         setRegisterAccount({ email: "", password: "", confirmPassword: "" });
       } else {
         setFlash("Successful register");
+        setEmailErrors("");
+        setPasswordErrors("");
       }
       setLoading(false);
     }
